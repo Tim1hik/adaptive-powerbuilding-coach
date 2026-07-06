@@ -29,6 +29,31 @@ export default async function HomePage() {
             </Card>
           ))}
         </div>
+        <section className="grid gap-4 lg:grid-cols-[0.9fr_1.1fr]">
+          <Card className="rounded-lg border-white/10 bg-white/[0.04]">
+            <CardHeader>
+              <CardTitle>{t("how.title")}</CardTitle>
+              <CardDescription>{t("how.body")}</CardDescription>
+            </CardHeader>
+          </Card>
+          <Card className="rounded-lg border-cyan-300/20 bg-cyan-300/10">
+            <CardHeader>
+              <CardTitle>{t("demo.title")}</CardTitle>
+              <CardDescription>{t("demo.body")}</CardDescription>
+              <Link href="/dashboard" className="mt-3 w-fit rounded-lg bg-cyan-200 px-4 py-2 text-sm font-medium text-zinc-950">{t("actions.demo")}</Link>
+            </CardHeader>
+          </Card>
+        </section>
+        <section className="grid gap-4 md:grid-cols-3">
+          {["ppl", "pwa", "support"].map((keyName) => (
+            <Card key={keyName} className="rounded-lg border-white/10 bg-white/[0.04]">
+              <CardHeader>
+                <CardTitle>{t(`teasers.${keyName}.title`)}</CardTitle>
+                <CardDescription>{t(`teasers.${keyName}.body`)}</CardDescription>
+              </CardHeader>
+            </Card>
+          ))}
+        </section>
       </main>
     </AppShell>
   );

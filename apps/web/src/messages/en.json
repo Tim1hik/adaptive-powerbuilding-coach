@@ -24,7 +24,8 @@
     "actions": {
       "start": "Start onboarding",
       "program": "View PPL x UL",
-      "install": "Install as app on iPhone"
+      "install": "Install as app on iPhone",
+      "demo": "Open demo dashboard"
     },
     "cards": {
       "readiness": {
@@ -40,7 +41,29 @@
         "body": "Leaderboards show display names only and never expose emails or health data."
       }
     },
-    "installInstructions": "Open Safari → Share → Add to Home Screen."
+    "installInstructions": "Open Safari → Share → Add to Home Screen.",
+    "how": {
+      "title": "How it works",
+      "body": "Create a profile, calculate adaptive nutrition targets, run a readiness check-in, then train the built-in PPL x UL program with workout diary and progress tracking."
+    },
+    "demo": {
+      "title": "Portfolio demo mode",
+      "body": "Demo mode starts with a 19-year-old male athlete, lean bulk goal, 67 kg body weight, realistic 1RM numbers, sample PPL x UL workouts, and body weight progress."
+    },
+    "teasers": {
+      "ppl": {
+        "title": "PPL x UL is the flagship plan",
+        "body": "Push, Pull, Legs, Rest, Upper, Lower, Rest with exact exercises, RPE, rest times, notes, and readiness adaptation."
+      },
+      "pwa": {
+        "title": "Installable iPhone PWA",
+        "body": "Open Safari, share, and add to Home Screen for a mobile app-like experience."
+      },
+      "support": {
+        "title": "Support future mobile apps",
+        "body": "The funding page explains the $100 mobile app milestone and future iOS/Android roadmap."
+      }
+    }
   },
   "auth": {
     "email": "Email",
