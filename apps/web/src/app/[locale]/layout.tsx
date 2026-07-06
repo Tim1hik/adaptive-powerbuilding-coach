@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import { hasLocale, NextIntlClientProvider } from "next-intl";
 import { getMessages, getTranslations } from "next-intl/server";
@@ -23,9 +23,35 @@ export async function generateMetadata(): Promise<Metadata> {
   return {
     title: t("title"),
     description: t("description"),
-    manifest: "/manifest.webmanifest"
+    manifest: "/manifest.webmanifest",
+    applicationName: "Adaptive Powerbuilding Coach",
+    appleWebApp: {
+      capable: true,
+      title: "APC Coach",
+      statusBarStyle: "black-translucent"
+    },
+    formatDetection: {
+      telephone: false,
+      email: false,
+      address: false
+    },
+    icons: {
+      icon: [
+        { url: "/icon-192.png", sizes: "192x192", type: "image/png" },
+        { url: "/icon-512.png", sizes: "512x512", type: "image/png" }
+      ],
+      apple: [{ url: "/apple-touch-icon.png", sizes: "180x180", type: "image/png" }]
+    }
   };
 }
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 1,
+  viewportFit: "cover",
+  themeColor: "#09090b"
+};
 
 export default async function LocaleLayout({
   children,

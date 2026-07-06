@@ -15,7 +15,9 @@ export default async function HomePage() {
           <div className="mt-6 flex flex-wrap gap-3">
             <Link href="/onboarding" className="rounded-lg bg-primary px-4 py-2 text-sm font-medium text-primary-foreground">{t("actions.start")}</Link>
             <Link href="/training/ppl-ul" className="rounded-lg border border-white/15 px-4 py-2 text-sm font-medium text-white">{t("actions.program")}</Link>
+            <Link href="/support" className="rounded-lg border border-cyan-300/30 px-4 py-2 text-sm font-medium text-cyan-100">{t("actions.install")}</Link>
           </div>
+          <p className="mt-4 text-sm text-zinc-400">{t("installInstructions")}</p>
         </section>
         <div className="grid gap-4 md:grid-cols-3">
           {["readiness", "training", "arena"].map((keyName) => (

@@ -23,7 +23,8 @@
     "subtitle": "A bilingual fitness PWA built for dynamic targets, workout logging, progress tracking, and competitive Arena accountability.",
     "actions": {
       "start": "Start onboarding",
-      "program": "View PPL x UL"
+      "program": "View PPL x UL",
+      "install": "Install as app on iPhone"
     },
     "cards": {
       "readiness": {
@@ -38,7 +39,8 @@
         "title": "Private opt-in Arena",
         "body": "Leaderboards show display names only and never expose emails or health data."
       }
-    }
+    },
+    "installInstructions": "Open Safari → Share → Add to Home Screen."
   },
   "auth": {
     "email": "Email",
