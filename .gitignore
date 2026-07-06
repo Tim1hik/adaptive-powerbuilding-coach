@@ -1,10 +1,12 @@
 # Dependencies
 node_modules/
+.turbo/
 
 # Build output
 dist/
 build/
 .next/
+*.tsbuildinfo
 out/
 
 # Environment
@@ -31,3 +33,6 @@ test-results/
 # Package manager caches
 .npm/
 .pnpm-store/
+
+# Local database
+docker-data/

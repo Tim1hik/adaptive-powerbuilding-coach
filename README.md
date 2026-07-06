@@ -2,24 +2,48 @@
 
 Adaptive bilingual PWA fitness web app with dynamic nutrition targets, carbohydrate cycling, readiness-based powerbuilding training adaptation, workout diary, progress tracking, Arena leaderboard, and a mobile app funding page.
 
-## Project Direction
+## Stack
+
+- Next.js App Router, TypeScript, Tailwind CSS, shadcn/ui, next-intl.
+- Supabase Auth, PostgreSQL, Drizzle ORM.
+- Zod, React Hook Form, Recharts, Vitest.
+- GitHub Actions and Vercel deployment.
+- PWA manifest and service worker.
+- Optional Docker only for local PostgreSQL development.
+
+## Workspace
+
+```text
+apps/web
+packages/core
+packages/db
+packages/shared-types
+docs
+```
+
+## Commands
+
+```bash
+pnpm install
+pnpm dev
+pnpm lint
+pnpm typecheck
+pnpm test
+pnpm build
+```
+
+## Product Decisions
 
 - Web-only MVP.
 - Installable on iPhone as a PWA through Safari -> Share -> Add to Home Screen.
 - Native iOS and Android apps are future roadmap items.
 - Apple Health integration is future roadmap, not part of the MVP.
 - Modular monolith architecture.
-- Localization from the beginning: English and Russian.
+- English and Russian localization from the beginning.
 
-## Planned MVP Areas
+## Default Training Program
 
-- Dynamic nutrition targets.
-- Carbohydrate cycling.
-- Readiness-based powerbuilding training adaptation.
-- Workout diary.
-- Progress tracking.
-- Arena leaderboard.
-- Mobile app funding page.
+The built-in default program is PPL x UL: Push / Pull / Legs / Rest / Upper / Lower / Rest.
 
 ## License
 

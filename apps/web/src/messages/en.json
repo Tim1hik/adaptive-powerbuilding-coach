@@ -1,0 +1,43 @@
+{
+  "metadata": {
+    "title": "Adaptive Powerbuilding Coach",
+    "description": "Adaptive bilingual PWA fitness web app"
+  },
+  "home": {
+    "eyebrow": "Web-only PWA MVP",
+    "title": "Adaptive powerbuilding coaching for training, nutrition, readiness, and progress.",
+    "subtitle": "A bilingual fitness PWA built for dynamic targets, workout logging, progress tracking, and competitive Arena accountability.",
+    "defaultPlan": {
+      "label": "Built-in default program",
+      "day": "Day {day}: {name}"
+    },
+    "cards": {
+      "readiness": {
+        "title": "Readiness adaptation",
+        "body": "Training decisions respond to sleep, soreness, stress, and motivation."
+      },
+      "training": {
+        "title": "Powerbuilding diary",
+        "body": "Log sessions, track progression, and keep default plans selectable."
+      },
+      "arena": {
+        "title": "Arena leaderboard",
+        "body": "Progress challenges and rankings support long-term consistency."
+      }
+    }
+  },
+  "trainingPlans": {
+    "pplUl": {
+      "title": "PPL x UL",
+      "description": "Push / Pull / Legs / Rest / Upper / Lower / Rest."
+    },
+    "days": {
+      "push": "Push",
+      "pull": "Pull",
+      "legs": "Legs",
+      "rest": "Rest",
+      "upper": "Upper",
+      "lower": "Lower"
+    }
+  }
+}

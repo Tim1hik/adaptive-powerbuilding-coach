@@ -1,0 +1,17 @@
+{
+  "name": "adaptive-powerbuilding-coach",
+  "version": "0.1.0",
+  "private": true,
+  "packageManager": "pnpm@11.7.0",
+  "scripts": {
+    "build": "pnpm --filter @adaptive-powerbuilding-coach/web build",
+    "dev": "pnpm --filter @adaptive-powerbuilding-coach/web dev",
+    "lint": "pnpm --filter @adaptive-powerbuilding-coach/web lint",
+    "test": "vitest run",
+    "typecheck": "pnpm --filter @adaptive-powerbuilding-coach/web typecheck && pnpm -r --filter './packages/**' typecheck"
+  },
+  "devDependencies": {
+    "@vitest/coverage-v8": "^4.0.16",
+    "vitest": "^4.0.16"
+  }
+}

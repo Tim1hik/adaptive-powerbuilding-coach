@@ -1,0 +1,19 @@
+{
+  "name": "@adaptive-powerbuilding-coach/core",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "scripts": {
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@adaptive-powerbuilding-coach/shared-types": "workspace:*",
+    "zod": "^4.2.2"
+  },
+  "devDependencies": {
+    "typescript": "^5.9.3"
+  }
+}
