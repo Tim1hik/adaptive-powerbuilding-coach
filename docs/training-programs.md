@@ -1,8 +1,8 @@
 # Training Programs
 
-The built-in default training program is PPL x UL.
+The built-in default training program is PPL x UL - Aesthetic Cut.
 
-## PPL x UL
+## Weekly Structure
 
 1. Push
 2. Pull
@@ -12,4 +12,14 @@ The built-in default training program is PPL x UL.
 6. Lower
 7. Rest
 
-This program must be implemented as a selectable/default training plan in the app.
+The program is implemented in `packages/core` as structured data and must be selectable/default in the app.
+
+## Day Exercise Counts
+
+- Push: 6 exercises.
+- Pull: 6 exercises.
+- Legs: 7 exercises.
+- Rest: recovery walking only.
+- Upper: 6 exercises.
+- Lower: 6 exercises.
+- Rest: recovery walking only.
