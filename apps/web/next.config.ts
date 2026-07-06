@@ -1,7 +1,13 @@
 import createNextIntlPlugin from "next-intl/plugin";
 import type { NextConfig } from "next";
+import { resolve } from "node:path";
+
+const workspaceRoot = resolve(process.cwd(), "../..");
 
 const nextConfig: NextConfig = {
+  turbopack: {
+    root: workspaceRoot
+  },
   transpilePackages: [
     "@adaptive-powerbuilding-coach/core",
     "@adaptive-powerbuilding-coach/db",
