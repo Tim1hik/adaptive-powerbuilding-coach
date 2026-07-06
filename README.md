@@ -30,7 +30,22 @@ pnpm lint
 pnpm typecheck
 pnpm test
 pnpm build
+pnpm start
 ```
+
+## Deployment
+
+Production target: Vercel for the web app and Supabase for database/auth.
+
+Vercel settings:
+
+- Framework: Next.js
+- Root directory: `apps/web`
+- Install command: `pnpm install --frozen-lockfile`
+- Build command: `pnpm --filter @adaptive-powerbuilding-coach/web build`
+- Output settings: Vercel default Next.js output
+
+Required environment variables are listed in `.env.example` and `docs/environment-variables.md`.
 
 ## Product Decisions
 
