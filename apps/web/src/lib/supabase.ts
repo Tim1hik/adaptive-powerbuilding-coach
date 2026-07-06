@@ -1,15 +1,16 @@
 import { createClient, type SupabaseClient } from "@supabase/supabase-js";
+import { publicEnv } from "@/lib/env";
 
 let browserClient: SupabaseClient | null = null;
 
 export function isSupabaseConfigured() {
-  return Boolean(process.env.NEXT_PUBLIC_SUPABASE_URL && process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY);
+  return Boolean(publicEnv.NEXT_PUBLIC_SUPABASE_URL && publicEnv.NEXT_PUBLIC_SUPABASE_ANON_KEY);
 }
 
 export function getSupabaseBrowserClient() {
   if (!isSupabaseConfigured()) return null;
   if (!browserClient) {
-    browserClient = createClient(process.env.NEXT_PUBLIC_SUPABASE_URL!, process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!);
+    browserClient = createClient(publicEnv.NEXT_PUBLIC_SUPABASE_URL!, publicEnv.NEXT_PUBLIC_SUPABASE_ANON_KEY!);
   }
   return browserClient;
 }

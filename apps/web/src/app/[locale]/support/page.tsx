@@ -4,15 +4,16 @@ import { CryptoWalletCard } from "@/components/crypto-wallet-card";
 import { FundingProgress } from "@/components/funding-progress";
 import { PageHeader } from "@/components/page-header";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { publicEnv } from "@/lib/env";
 
 export default async function SupportPage() {
   const t = await getTranslations("support");
-  const donatePayUrl = process.env.NEXT_PUBLIC_DONATEPAY_URL;
-  const telegramUsername = process.env.NEXT_PUBLIC_TELEGRAM_USERNAME || "@tim1hik";
+  const donatePayUrl = publicEnv.NEXT_PUBLIC_DONATEPAY_URL;
+  const telegramUsername = publicEnv.NEXT_PUBLIC_TELEGRAM_USERNAME || "@tim1hik";
   const wallets = [
-    { network: "BTC", address: process.env.NEXT_PUBLIC_CRYPTO_BTC_ADDRESS },
-    { network: "ETH", address: process.env.NEXT_PUBLIC_CRYPTO_ETH_ADDRESS },
-    { network: "USDT TRC20", address: process.env.NEXT_PUBLIC_CRYPTO_USDT_TRC20_ADDRESS }
+    { network: "BTC", address: publicEnv.NEXT_PUBLIC_CRYPTO_BTC_ADDRESS },
+    { network: "ETH", address: publicEnv.NEXT_PUBLIC_CRYPTO_ETH_ADDRESS },
+    { network: "USDT TRC20", address: publicEnv.NEXT_PUBLIC_CRYPTO_USDT_TRC20_ADDRESS }
   ];
 
   return (

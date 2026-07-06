@@ -10,3 +10,5 @@ Row Level Security is required for private tables.
 - Service role access is server-only for administrative jobs.
 
 Policy SQL is tracked in `packages/db/drizzle/0001_rls_policies.sql`.
+
+The service role key bypasses RLS and must only be used from trusted server-side administrative code.

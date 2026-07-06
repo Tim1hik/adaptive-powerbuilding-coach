@@ -362,13 +362,23 @@
   },
   "privacy": {
     "title": "Privacy",
-    "description": "How private data and public leaderboard data are separated.",
-    "body": "Private profile, training, nutrition, sleep, and readiness data stay private. Arena uses separate opt-in public data."
+    "description": "How private data, public leaderboard data, caching, and service credentials are separated.",
+    "sections": {
+      "privateData": "Private profile, training, nutrition, sleep, body weight, and readiness data is owner-only and protected by Supabase RLS.",
+      "leaderboard": "Arena uses separate opt-in public leaderboard rows. It shows display names only and never exposes email or private health data.",
+      "serviceRole": "The Supabase service role key is server-only and must never be shipped to the browser.",
+      "cache": "The PWA service worker caches only safe static assets and the offline page, not private user data."
+    }
   },
   "terms": {
     "title": "Terms",
-    "description": "MVP terms placeholder.",
-    "body": "This app provides training and nutrition planning support and is not medical advice."
+    "description": "MVP terms for safe and fair use.",
+    "sections": {
+      "fitness": "The app provides training and nutrition planning support, not medical advice.",
+      "availability": "The app is designed with production-oriented abuse protection and scalable deployment practices, but no service is guaranteed to be always available.",
+      "accounts": "Users are responsible for using accurate inputs and protecting their account access.",
+      "abuse": "Automated abuse, scraping private data, or attempts to bypass rate limits and access controls are not allowed."
+    }
   },
   "pplUl": {
     "title": "PPL x UL - Aesthetic Cut",

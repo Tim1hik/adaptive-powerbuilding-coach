@@ -1,10 +1,33 @@
 # Security
 
+The app is designed with production-oriented abuse protection and scalable deployment practices. It is not described as DDoS-proof.
+
+## Implemented Now
+
+- Security headers in `next.config.ts`.
+- Basic path protection in `src/proxy.ts`.
+- Strict public environment validation with Zod.
+- Server-only env validation helper for service keys.
+- API request validation with Zod.
+- In-memory app-level rate limit foundation for MVP API routes.
+- Safe API errors that avoid leaking internals.
+- Audit log table model in `packages/db`.
+- Supabase RLS policy SQL in `packages/db/drizzle/0001_rls_policies.sql`.
+
+## Data Access
+
+- Users can access only their own private data.
+- Training program templates can be public read.
+- Leaderboard must read only public opt-in rows from `leaderboard_profiles` and `leaderboard_entries`.
+- Leaderboard must never expose email or private health data.
+- Support funding data can be public.
+
+## Secrets
+
 - Do not commit secrets.
-- Keep Supabase service role keys server-only.
-- Use row-level security for user-owned data.
-- Validate input with Zod before persistence.
-- Keep authentication and database clients lazily initialized where build-time evaluation is possible.
-- Email and password is the main MVP auth method; OAuth providers are optional.
-- Do not expose email or private health data through leaderboard queries.
-- Use separate public leaderboard tables with opt-in controls.
+- Never expose `SUPABASE_SERVICE_ROLE_KEY` to frontend code.
+- Do not place secrets in `NEXT_PUBLIC_*` variables.
+
+## Later With Cloudflare
+
+Cloudflare can be added after a custom domain is configured for DDoS protection, WAF, bot protection, and edge rate limiting.

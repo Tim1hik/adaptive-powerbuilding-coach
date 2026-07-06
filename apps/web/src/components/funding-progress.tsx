@@ -1,8 +1,9 @@
 import { getTranslations } from "next-intl/server";
+import { publicEnv } from "@/lib/env";
 
 const goalAmount = 100;
-const currentRaised = Number(process.env.NEXT_PUBLIC_MOBILE_FUND_RAISED_USD ?? "0");
-const donorCount = process.env.NEXT_PUBLIC_MOBILE_FUND_DONOR_COUNT;
+const currentRaised = Number(publicEnv.NEXT_PUBLIC_MOBILE_FUND_RAISED_USD ?? "0");
+const donorCount = publicEnv.NEXT_PUBLIC_MOBILE_FUND_DONOR_COUNT;
 
 export async function FundingProgress() {
   const t = await getTranslations("support");
