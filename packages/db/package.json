@@ -7,9 +7,11 @@
     ".": "./src/index.ts"
   },
   "scripts": {
+    "db:seed": "tsx src/seed.ts",
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
+    "@adaptive-powerbuilding-coach/core": "workspace:*",
     "@supabase/supabase-js": "^2.89.0",
     "drizzle-orm": "^0.45.1",
     "postgres": "^3.4.7"
@@ -17,6 +19,7 @@
   "devDependencies": {
     "@types/node": "^20.19.43",
     "drizzle-kit": "^0.31.10",
+    "tsx": "^4.21.0",
     "typescript": "^5.9.3"
   }
 }

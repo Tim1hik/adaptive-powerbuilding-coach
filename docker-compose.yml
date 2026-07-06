@@ -1,0 +1,12 @@
+services:
+  postgres:
+    image: postgres:17
+    container_name: adaptive-powerbuilding-postgres
+    environment:
+      POSTGRES_DB: adaptive_powerbuilding_coach
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+    ports:
+      - "5432:5432"
+    volumes:
+      - ./docker-data/postgres:/var/lib/postgresql/data

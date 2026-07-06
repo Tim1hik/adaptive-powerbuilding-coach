@@ -14,6 +14,8 @@ Weekly structure:
 
 The program is implemented as structured data in `packages/core` through `getDefaultPplUlProgram`.
 
+The Supabase seed is generated from the same core program and writes public template rows for `training_programs`, `training_program_days`, and `training_program_exercises`.
+
 Progression uses double progression. When all working sets reach the top of the rep range at target RPE, increase load. Big lifts add 2.5-5 kg; isolation exercises use the smallest available increment. During a cut, RPE 10 should not be forced on every set. Heavy compound lifts usually stay at RPE 8-9, while RPE 10 is mostly reserved for the last set of safe isolation work.
 
 ## Day 1 - Push

@@ -118,6 +118,9 @@ importers:
 
   packages/db:
     dependencies:
+      '@adaptive-powerbuilding-coach/core':
+        specifier: workspace:*
+        version: link:../core
       '@supabase/supabase-js':
         specifier: ^2.89.0
         version: 2.110.0
@@ -134,6 +137,9 @@ importers:
       drizzle-kit:
         specifier: ^0.31.10
         version: 0.31.10
+      tsx:
+        specifier: ^4.21.0
+        version: 4.23.0
       typescript:
         specifier: ^5.9.3
         version: 5.9.3

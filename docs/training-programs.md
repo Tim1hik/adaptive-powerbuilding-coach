@@ -14,6 +14,8 @@ The built-in default training program is PPL x UL - Aesthetic Cut.
 
 The program is implemented in `packages/core` as structured data and must be selectable/default in the app.
 
+The database seed in `packages/db/src/seed-default-ppl-ul.ts` mirrors the same 7-day template without depending on a real user.
+
 ## Day Exercise Counts
 
 - Push: 6 exercises.
