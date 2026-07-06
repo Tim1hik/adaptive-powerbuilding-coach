@@ -1,43 +1,148 @@
 {
-  "metadata": {
-    "title": "Adaptive Powerbuilding Coach",
-    "description": "Adaptive bilingual PWA fitness web app"
+  "metadata": { "title": "Adaptive Powerbuilding Coach", "description": "Adaptive bilingual PWA fitness web app" },
+  "common": { "language": "Language" },
+  "nav": {
+    "brand": "Power Coach",
+    "dashboard": "Dashboard",
+    "nutrition": "Nutrition",
+    "training": "Training",
+    "checkIn": "Check-in",
+    "progress": "Progress",
+    "arena": "Arena",
+    "support": "Support",
+    "settings": "Settings"
   },
   "home": {
     "eyebrow": "Web-only PWA MVP",
     "title": "Adaptive powerbuilding coaching for training, nutrition, readiness, and progress.",
     "subtitle": "A bilingual fitness PWA built for dynamic targets, workout logging, progress tracking, and competitive Arena accountability.",
-    "defaultPlan": {
-      "label": "Built-in default program",
-      "day": "Day {day}: {name}"
-    },
+    "actions": { "start": "Start onboarding", "program": "View PPL x UL" },
     "cards": {
-      "readiness": {
-        "title": "Readiness adaptation",
-        "body": "Training decisions respond to sleep, soreness, stress, and motivation."
-      },
-      "training": {
-        "title": "Powerbuilding diary",
-        "body": "Log sessions, track progression, and keep default plans selectable."
-      },
-      "arena": {
-        "title": "Arena leaderboard",
-        "body": "Progress challenges and rankings support long-term consistency."
-      }
+      "readiness": { "title": "Readiness adaptation", "body": "Training responds to sleep, soreness, stress, motivation, and pain." },
+      "training": { "title": "PPL x UL diary", "body": "Use the default program, log sets, and track e1RM progress." },
+      "arena": { "title": "Private opt-in Arena", "body": "Leaderboards show display names only and never expose emails or health data." }
     }
   },
-  "trainingPlans": {
-    "pplUl": {
-      "title": "PPL x UL",
-      "description": "Push / Pull / Legs / Rest / Upper / Lower / Rest."
+  "auth": {
+    "email": "Email",
+    "password": "Password",
+    "signIn": "Sign in",
+    "signUp": "Create account",
+    "anyProvider": "Any valid email provider is supported.",
+    "demoMode": "Supabase is not configured, so demo mode is active.",
+    "signedIn": "Signed in.",
+    "signedUp": "Account created. Continue to onboarding.",
+    "authError": "Authentication failed. Check the email and password.",
+    "signInPage": { "title": "Sign in", "description": "Use email and password. Google OAuth is optional later." },
+    "signUpPage": { "title": "Sign up", "description": "Create an account with any valid email provider, then continue to onboarding." }
+  },
+  "onboarding": {
+    "title": "Onboarding",
+    "description": "Build your first nutrition targets and select the default PPL x UL program.",
+    "offer": "At the end we calculate calories and macros, select PPL x UL - Aesthetic Cut, and adapt it after readiness check-ins.",
+    "submit": "Calculate and select program",
+    "fields": {
+      "displayName": "Display name", "age": "Age", "sex": "Sex", "heightCm": "Height, cm", "weightKg": "Weight, kg", "bodyFat": "Estimated body fat, optional", "goal": "Goal", "averageSteps": "Average steps", "trainingDaysPerWeek": "Training days per week", "sleepDuration": "Sleep duration", "sleepQuality": "Sleep quality", "bench1rm": "Bench 1RM", "squat1rm": "Squat 1RM", "deadlift1rm": "Deadlift 1RM", "overheadPress1rm": "Overhead press 1RM", "preferredLanguage": "Preferred language"
     },
-    "days": {
-      "push": "Push",
-      "pull": "Pull",
-      "legs": "Legs",
-      "rest": "Rest",
-      "upper": "Upper",
-      "lower": "Lower"
+    "options": { "male": "Male", "female": "Female", "english": "English", "russian": "Russian" },
+    "goals": { "aggressive_cut": "Aggressive cut", "cut": "Cut", "maintenance": "Maintenance", "lean_bulk": "Lean bulk", "bulk": "Bulk" }
+  },
+  "dashboard": {
+    "title": "Dashboard",
+    "description": "Today’s training, nutrition, readiness, and weight trend in one mobile-first view.",
+    "metrics": { "calories": "Today calories", "protein": "Protein", "carbs": "Carbs", "training": "Today training", "program": "Active program", "readiness": "Readiness", "lastWeight": "Last body weight", "nextWorkout": "Next workout" },
+    "todayTraining": "Push",
+    "nextWorkout": "Pull",
+    "average": "7-day average",
+    "trend": "Weekly trend",
+    "quickCheckIn": "Quick check-in",
+    "quickLog": "Quick log workout"
+  },
+  "profile": { "title": "Profile", "description": "Personal settings for coaching calculations.", "body": "Email, Telegram username, body metrics, lifting numbers, privacy, and language preferences live here." },
+  "nutrition": {
+    "title": "Nutrition",
+    "description": "Dynamic calories, macros, and carb cycling with a safety-first disclaimer.",
+    "metrics": { "calories": "Calories", "proteinGrams": "Protein", "fatGrams": "Fats", "carbGrams": "Carbs" },
+    "dayType": "Day type",
+    "dayTypes": { "heavy_training_day": "Heavy training day", "normal_training_day": "Normal training day", "rest_day": "Rest day", "refeed_day": "Refeed day" },
+    "cycling": "Carbs move up on harder training days and down on rest days while protein and fats stay stable.",
+    "recalculate": "Recalculate",
+    "safety": "Nutrition targets are planning support, not medical advice."
+  },
+  "training": {
+    "title": "Training",
+    "description": "Current plan, exercises, sets, reps, RPE targets, rest times, notes, and progression rules.",
+    "openProgram": "Open dedicated PPL x UL page",
+    "exerciseLine": "{name} · {sets} x {min}-{max} · RPE {rpeMin}-{rpeMax}",
+    "days": { "push": "Push", "pull": "Pull", "legs": "Legs", "rest": "Rest", "upper": "Upper", "lower": "Lower" }
+  },
+  "diary": {
+    "title": "Training diary",
+    "description": "Create a workout session, log sets, show previous performance, and estimate PRs.",
+    "programDay": "Program day", "exercise": "Exercise", "weightKg": "Weight, kg", "reps": "Reps", "rpe": "RPE", "notes": "Notes", "complete": "Mark session complete", "previous": "Previous performance", "e1rm": "e1RM",
+    "days": { "push": "Push", "pull": "Pull", "legs": "Legs", "upper": "Upper", "lower": "Lower" }
+  },
+  "checkIn": {
+    "title": "Readiness check-in",
+    "description": "Answer before training to adapt the PPL x UL session.",
+    "submit": "Calculate readiness",
+    "recommendation": "Adapted PPL x UL recommendation is ready.",
+    "safety": "Do not train through strong pain. Replace or reduce painful movements.",
+    "fields": { "sleepQuality": "Sleep quality", "sleepDurationHours": "Sleep duration", "energy": "Energy", "stress": "Stress", "motivation": "Motivation", "soreness": "Soreness", "painArea": "Pain area", "painSeverity": "Pain severity", "desireToTrainHeavy": "I want to train heavy" },
+    "painArea": { "none": "None", "shoulder": "Shoulder", "low_back": "Low back", "knee": "Knee", "elbow": "Elbow", "hip": "Hip", "other": "Other" },
+    "painSeverity": { "none": "None", "mild": "Mild", "moderate": "Moderate", "strong": "Strong" },
+    "notes": { "reduce_load_or_sets": "Reduce load or remove sets.", "light_technique": "Use a light technique session.", "keep_plan": "Keep the plan.", "keep_plan_no_pr": "Keep the plan without PR attempts.", "block_heavy_sets": "Block heavy sets.", "block_heavy_sets_for_pain": "Heavy sets blocked for pain.", "reduce_or_replace_heavy_pressing": "Reduce or replace heavy pressing.", "reduce_or_replace_squat_deadlift": "Reduce or replace squat/deadlift.", "reduce_squat_intensity_or_substitute": "Reduce squat intensity or substitute." }
+  },
+  "progress": {
+    "title": "Progress",
+    "description": "Body weight, seven-day average, weekly trend, e1RM progress, workout volume, and consistency.",
+    "metrics": { "average": "7-day average", "trend": "Weekly trend", "e1rm": "e1RM progress", "consistency": "Consistency" },
+    "values": { "average": "79.9 kg", "trend": "-0.4 kg", "e1rm": "+2.5 kg", "consistency": "80%" },
+    "weightChart": "Body weight entries", "volumeChart": "Workout volume"
+  },
+  "arena": {
+    "title": "Arena",
+    "description": "Opt-in leaderboard with public display names only.",
+    "tabs": { "powerScore": "Power Score", "relativeBench": "Relative Bench", "relativeSquat": "Relative Squat", "relativeDeadlift": "Relative Deadlift", "monthlyProgress": "Monthly Progress", "consistency": "Consistency" },
+    "privacyTitle": "Privacy rules",
+    "privacyBody": "Users must opt in. Arena shows display names only and never shows email, private health data, or profile records."
+  },
+  "settings": {
+    "title": "Settings", "description": "Language, units, privacy, leaderboard opt-in, Telegram username, and demo controls.", "resetDemo": "Reset demo data",
+    "items": {
+      "language": { "title": "Language", "body": "Switch between English and Russian." },
+      "units": { "title": "Units", "body": "Metric is the MVP default." },
+      "theme": { "title": "Theme", "body": "Dark premium dashboard theme." },
+      "privacy": { "title": "Privacy", "body": "Control public leaderboard visibility." },
+      "leaderboardOptIn": { "title": "Leaderboard opt-in", "body": "Arena requires explicit opt-in." },
+      "telegramUsername": { "title": "Telegram username", "body": "Profile contact field, not Telegram auth." },
+      "activeProgram": { "title": "Active training program", "body": "PPL x UL - Aesthetic Cut." },
+      "dataExport": { "title": "Data export", "body": "Placeholder for export." },
+      "deleteAccount": { "title": "Delete account", "body": "Placeholder for account deletion." }
     }
-  }
+  },
+  "support": {
+    "title": "Support the project", "description": "Funding page for future native mobile apps and Apple Developer Program costs.",
+    "sections": {
+      "donatepay": { "title": "DonatePay", "body": "DonatePay link placeholder for manual funding updates." },
+      "crypto": { "title": "Crypto wallets", "body": "BTC, ETH, and USDT TRC20 wallet placeholders." },
+      "telegram": { "title": "Telegram", "body": "Telegram contact is shown for support, not authentication." },
+      "funding": { "title": "Mobile app funding goal", "body": "Funds support future iOS and Android apps after the web MVP." },
+      "rewards": { "title": "First 10 donor rewards", "body": "Early supporters can be listed by optional display name." },
+      "apple": { "title": "Apple Developer Program", "body": "Funding may cover Apple Developer Program costs for future iOS distribution." }
+    }
+  },
+  "privacy": { "title": "Privacy", "description": "How private data and public leaderboard data are separated.", "body": "Private profile, training, nutrition, sleep, and readiness data stay private. Arena uses separate opt-in public data." },
+  "terms": { "title": "Terms", "description": "MVP terms placeholder.", "body": "This app provides training and nutrition planning support and is not medical advice." },
+  "pplUl": {
+    "title": "PPL x UL - Aesthetic Cut", "description": "Push / Pull / Legs / Rest / Upper / Lower / Rest with readiness adaptation.",
+    "useProgram": "Use this program", "startCheckIn": "Start today’s check-in", "dayTitle": "Day {day}: {name}", "progression": "Progression and cut-specific notes", "setsValue": "{sets} x {min}-{max}", "restValue": "{min}-{max} sec",
+    "days": { "push": "Push", "pull": "Pull", "legs": "Legs", "rest": "Rest", "upper": "Upper", "lower": "Lower" },
+    "columns": { "muscle": "Muscle group", "exercise": "Exercise", "sets": "Sets x reps", "rpe": "RPE", "rest": "Rest", "notes": "Notes" },
+    "muscles": { "chest": "Chest", "back": "Back", "shoulders": "Shoulders", "triceps": "Triceps", "biceps": "Biceps", "rear_delt": "Rear delt", "quads": "Quads", "hamstrings": "Hamstrings", "calves": "Calves", "abs": "Abs", "adductors": "Adductors" },
+    "notes": { "controlled_eccentric": "controlled eccentric", "full_range_of_motion": "full range of motion", "avoid_ego_lifting": "avoid ego lifting", "do_not_chase_load_through_pain": "do not chase load through pain", "maintain_stable_scapula": "maintain stable scapula" },
+    "restNotes": { "rest_walking_10_to_15k_steps_by_recovery": "Rest, walking, 10-15k steps by recovery.", "do_not_turn_rest_day_into_hard_cardio": "Do not turn rest day into hard cardio.", "rest_and_steps_by_recovery": "Rest and steps by recovery." },
+    "rules": { "double_progression": "Use double progression.", "increase_load_when_top_reps_all_sets_at_target_rpe": "Increase load when all sets reach the top of the rep range at target RPE.", "big_lifts_add_2_5_to_5_kg": "Big lifts add 2.5-5 kg.", "isolation_add_smallest_increment": "Isolation exercises add the smallest available increment.", "cut_do_not_force_rpe_10_every_set": "On a cut, do not force RPE 10 on every set.", "compound_lifts_usually_rpe_8_to_9": "Keep compounds mostly RPE 8-9.", "rpe_10_only_last_safe_isolation_set": "RPE 10 mainly belongs on the last set of safe isolation exercises." }
+  },
+  "trainingPlans": { "pplUl": { "title": "PPL x UL", "description": "Push / Pull / Legs / Rest / Upper / Lower / Rest." }, "days": { "push": "Push", "pull": "Pull", "legs": "Legs", "rest": "Rest", "upper": "Upper", "lower": "Lower" } }
 }

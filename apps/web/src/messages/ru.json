@@ -1,43 +1,49 @@
 {
-  "metadata": {
-    "title": "Adaptive Powerbuilding Coach",
-    "description": "Адаптивное двуязычное фитнес PWA"
-  },
+  "metadata": { "title": "Adaptive Powerbuilding Coach", "description": "Адаптивное двуязычное фитнес PWA" },
+  "common": { "language": "Язык" },
+  "nav": { "brand": "Power Coach", "dashboard": "Панель", "nutrition": "Питание", "training": "Тренировки", "checkIn": "Чек-ин", "progress": "Прогресс", "arena": "Arena", "support": "Поддержка", "settings": "Настройки" },
   "home": {
-    "eyebrow": "Веб PWA MVP",
-    "title": "Адаптивный powerbuilding-коучинг для тренировок, питания, готовности и прогресса.",
-    "subtitle": "Двуязычное фитнес PWA для динамических целей, дневника тренировок, отслеживания прогресса и соревновательной Arena.",
-    "defaultPlan": {
-      "label": "Встроенная программа по умолчанию",
-      "day": "День {day}: {name}"
-    },
-    "cards": {
-      "readiness": {
-        "title": "Адаптация по готовности",
-        "body": "Тренировочные решения учитывают сон, крепатуру, стресс и мотивацию."
-      },
-      "training": {
-        "title": "Дневник powerbuilding",
-        "body": "Записывайте тренировки, отслеживайте прогрессию и выбирайте базовые планы."
-      },
-      "arena": {
-        "title": "Рейтинг Arena",
-        "body": "Челленджи прогресса и рейтинги помогают сохранять регулярность."
-      }
-    }
+    "eyebrow": "Веб PWA MVP", "title": "Адаптивный powerbuilding-коучинг для тренировок, питания, готовности и прогресса.", "subtitle": "Двуязычное фитнес PWA для динамических целей, дневника тренировок, прогресса и Arena.",
+    "actions": { "start": "Начать онбординг", "program": "Смотреть PPL x UL" },
+    "cards": { "readiness": { "title": "Адаптация готовности", "body": "Тренировка учитывает сон, крепатуру, стресс, мотивацию и боль." }, "training": { "title": "Дневник PPL x UL", "body": "Используйте программу, записывайте подходы и отслеживайте e1RM." }, "arena": { "title": "Приватная Arena", "body": "Рейтинги показывают только имя и не раскрывают email или здоровье." } }
   },
-  "trainingPlans": {
-    "pplUl": {
-      "title": "PPL x UL",
-      "description": "Жим / Тяга / Ноги / Отдых / Верх / Низ / Отдых."
-    },
-    "days": {
-      "push": "Жим",
-      "pull": "Тяга",
-      "legs": "Ноги",
-      "rest": "Отдых",
-      "upper": "Верх",
-      "lower": "Низ"
-    }
-  }
+  "auth": {
+    "email": "Email", "password": "Пароль", "signIn": "Войти", "signUp": "Создать аккаунт", "anyProvider": "Поддерживается любой валидный email-провайдер.", "demoMode": "Supabase не настроен, активен демо-режим.", "signedIn": "Вход выполнен.", "signedUp": "Аккаунт создан. Продолжите онбординг.", "authError": "Ошибка авторизации. Проверьте email и пароль.",
+    "signInPage": { "title": "Вход", "description": "Используйте email и пароль. Google OAuth можно добавить позже." },
+    "signUpPage": { "title": "Регистрация", "description": "Создайте аккаунт с любым валидным email и продолжите онбординг." }
+  },
+  "onboarding": {
+    "title": "Онбординг", "description": "Создайте первые цели питания и выберите PPL x UL.", "offer": "В конце мы рассчитаем калории и макросы, выберем PPL x UL - Aesthetic Cut и будем адаптировать программу после чек-инов.", "submit": "Рассчитать и выбрать программу",
+    "fields": { "displayName": "Отображаемое имя", "age": "Возраст", "sex": "Пол", "heightCm": "Рост, см", "weightKg": "Вес, кг", "bodyFat": "Процент жира, опционально", "goal": "Цель", "averageSteps": "Средние шаги", "trainingDaysPerWeek": "Тренировок в неделю", "sleepDuration": "Длительность сна", "sleepQuality": "Качество сна", "bench1rm": "1ПМ жим", "squat1rm": "1ПМ присед", "deadlift1rm": "1ПМ тяга", "overheadPress1rm": "1ПМ жим стоя", "preferredLanguage": "Предпочитаемый язык" },
+    "options": { "male": "Мужской", "female": "Женский", "english": "Английский", "russian": "Русский" },
+    "goals": { "aggressive_cut": "Агрессивная сушка", "cut": "Сушка", "maintenance": "Поддержание", "lean_bulk": "Чистый набор", "bulk": "Набор" }
+  },
+  "dashboard": {
+    "title": "Панель", "description": "Тренировка, питание, готовность и весовой тренд на сегодня.", "metrics": { "calories": "Калории сегодня", "protein": "Белок", "carbs": "Углеводы", "training": "Тренировка", "program": "Активная программа", "readiness": "Готовность", "lastWeight": "Последний вес", "nextWorkout": "Следующая тренировка" }, "todayTraining": "Жим", "nextWorkout": "Тяга", "average": "Среднее 7 дней", "trend": "Недельный тренд", "quickCheckIn": "Быстрый чек-ин", "quickLog": "Записать тренировку"
+  },
+  "profile": { "title": "Профиль", "description": "Персональные настройки для расчетов.", "body": "Email, Telegram username, метрики тела, силовые, приватность и язык находятся здесь." },
+  "nutrition": {
+    "title": "Питание", "description": "Динамические калории, макросы и углеводное циклирование.", "metrics": { "calories": "Калории", "proteinGrams": "Белок", "fatGrams": "Жиры", "carbGrams": "Углеводы" }, "dayType": "Тип дня", "dayTypes": { "heavy_training_day": "Тяжелая тренировка", "normal_training_day": "Обычная тренировка", "rest_day": "День отдыха", "refeed_day": "Рефид" }, "cycling": "Углеводы выше в тяжелые дни и ниже в дни отдыха, белок и жиры стабильны.", "recalculate": "Пересчитать", "safety": "Цели питания помогают планировать и не являются медицинской рекомендацией."
+  },
+  "training": { "title": "Тренировки", "description": "План, упражнения, подходы, повторы, RPE, отдых, заметки и прогрессия.", "openProgram": "Открыть страницу PPL x UL", "exerciseLine": "{name} · {sets} x {min}-{max} · RPE {rpeMin}-{rpeMax}", "days": { "push": "Жим", "pull": "Тяга", "legs": "Ноги", "rest": "Отдых", "upper": "Верх", "lower": "Низ" } },
+  "diary": { "title": "Дневник тренировок", "description": "Создавайте сессии, записывайте подходы, смотрите прошлые результаты и e1RM.", "programDay": "День программы", "exercise": "Упражнение", "weightKg": "Вес, кг", "reps": "Повторы", "rpe": "RPE", "notes": "Заметки", "complete": "Завершить сессию", "previous": "Прошлые результаты", "e1rm": "e1RM", "days": { "push": "Жим", "pull": "Тяга", "legs": "Ноги", "upper": "Верх", "lower": "Низ" } },
+  "checkIn": {
+    "title": "Чек-ин готовности", "description": "Ответьте перед тренировкой, чтобы адаптировать PPL x UL.", "submit": "Рассчитать готовность", "recommendation": "Адаптированная рекомендация PPL x UL готова.", "safety": "Не тренируйтесь через сильную боль. Замените или снизьте болезненные движения.",
+    "fields": { "sleepQuality": "Качество сна", "sleepDurationHours": "Длительность сна", "energy": "Энергия", "stress": "Стресс", "motivation": "Мотивация", "soreness": "Крепатура", "painArea": "Зона боли", "painSeverity": "Сила боли", "desireToTrainHeavy": "Хочу тренироваться тяжело" },
+    "painArea": { "none": "Нет", "shoulder": "Плечо", "low_back": "Поясница", "knee": "Колено", "elbow": "Локоть", "hip": "Тазобедренный", "other": "Другое" }, "painSeverity": { "none": "Нет", "mild": "Легкая", "moderate": "Средняя", "strong": "Сильная" },
+    "notes": { "reduce_load_or_sets": "Снизьте вес или уберите подходы.", "light_technique": "Легкая техническая сессия.", "keep_plan": "Оставить план.", "keep_plan_no_pr": "Оставить план без PR.", "block_heavy_sets": "Заблокировать тяжелые подходы.", "block_heavy_sets_for_pain": "Тяжелые подходы заблокированы из-за боли.", "reduce_or_replace_heavy_pressing": "Снизьте или замените тяжелые жимы.", "reduce_or_replace_squat_deadlift": "Снизьте или замените присед/тягу.", "reduce_squat_intensity_or_substitute": "Снизьте интенсивность приседа или замените." }
+  },
+  "progress": { "title": "Прогресс", "description": "Вес, среднее 7 дней, недельный тренд, e1RM, объем и регулярность.", "metrics": { "average": "Среднее 7 дней", "trend": "Недельный тренд", "e1rm": "Прогресс e1RM", "consistency": "Регулярность" }, "values": { "average": "79.9 кг", "trend": "-0.4 кг", "e1rm": "+2.5 кг", "consistency": "80%" }, "weightChart": "Записи веса", "volumeChart": "Объем тренировки" },
+  "arena": { "title": "Arena", "description": "Опциональный рейтинг только с публичным именем.", "tabs": { "powerScore": "Power Score", "relativeBench": "Жим к весу тела", "relativeSquat": "Присед к весу тела", "relativeDeadlift": "Тяга к весу тела", "monthlyProgress": "Месячный прогресс", "consistency": "Регулярность" }, "privacyTitle": "Правила приватности", "privacyBody": "Пользователь должен включить участие. Arena показывает только имя и не показывает email, здоровье или приватный профиль." },
+  "settings": { "title": "Настройки", "description": "Язык, единицы, приватность, Arena, Telegram username и демо-данные.", "resetDemo": "Сбросить демо-данные", "items": { "language": { "title": "Язык", "body": "Переключение между английским и русским." }, "units": { "title": "Единицы", "body": "Метрика по умолчанию в MVP." }, "theme": { "title": "Тема", "body": "Темная премиальная панель." }, "privacy": { "title": "Приватность", "body": "Контроль публичности в рейтинге." }, "leaderboardOptIn": { "title": "Участие в рейтинге", "body": "Arena требует явного согласия." }, "telegramUsername": { "title": "Telegram username", "body": "Поле профиля, не Telegram auth." }, "activeProgram": { "title": "Активная программа", "body": "PPL x UL - Aesthetic Cut." }, "dataExport": { "title": "Экспорт данных", "body": "Заглушка экспорта." }, "deleteAccount": { "title": "Удалить аккаунт", "body": "Заглушка удаления аккаунта." } } },
+  "support": { "title": "Поддержать проект", "description": "Страница финансирования будущих нативных приложений и Apple Developer Program.", "sections": { "donatepay": { "title": "DonatePay", "body": "Заглушка ссылки DonatePay для ручного обновления сборов." }, "crypto": { "title": "Криптокошельки", "body": "Заглушки BTC, ETH и USDT TRC20." }, "telegram": { "title": "Telegram", "body": "Telegram указан для связи, не для авторизации." }, "funding": { "title": "Цель на мобильные приложения", "body": "Средства помогут будущим iOS и Android приложениям после веб MVP." }, "rewards": { "title": "Награды первым 10 донорам", "body": "Ранние supporters могут быть указаны по желанию." }, "apple": { "title": "Apple Developer Program", "body": "Сбор может покрыть расходы Apple Developer Program для будущей iOS публикации." } } },
+  "privacy": { "title": "Приватность", "description": "Разделение приватных данных и публичного рейтинга.", "body": "Профиль, тренировки, питание, сон и готовность остаются приватными. Arena использует отдельные публичные opt-in данные." },
+  "terms": { "title": "Условия", "description": "Заглушка условий MVP.", "body": "Приложение помогает планировать тренировки и питание, но не является медицинской рекомендацией." },
+  "pplUl": {
+    "title": "PPL x UL - Aesthetic Cut", "description": "Жим / Тяга / Ноги / Отдых / Верх / Низ / Отдых с адаптацией готовности.", "useProgram": "Использовать программу", "startCheckIn": "Начать чек-ин", "dayTitle": "День {day}: {name}", "progression": "Прогрессия и заметки для сушки", "setsValue": "{sets} x {min}-{max}", "restValue": "{min}-{max} сек",
+    "days": { "push": "Жим", "pull": "Тяга", "legs": "Ноги", "rest": "Отдых", "upper": "Верх", "lower": "Низ" }, "columns": { "muscle": "Мышечная группа", "exercise": "Упражнение", "sets": "Подходы x повторы", "rpe": "RPE", "rest": "Отдых", "notes": "Заметки" }, "muscles": { "chest": "Грудь", "back": "Спина", "shoulders": "Плечи", "triceps": "Трицепс", "biceps": "Бицепс", "rear_delt": "Задняя дельта", "quads": "Квадрицепс", "hamstrings": "Бицепс бедра", "calves": "Икры", "abs": "Пресс", "adductors": "Приводящие" },
+    "notes": { "controlled_eccentric": "контролируемая негативная фаза", "full_range_of_motion": "полная амплитуда", "avoid_ego_lifting": "без эго-лифтинга", "do_not_chase_load_through_pain": "не гнаться за весом через боль", "maintain_stable_scapula": "стабильная лопатка" }, "restNotes": { "rest_walking_10_to_15k_steps_by_recovery": "Отдых, ходьба, 10-15 тыс. шагов по восстановлению.", "do_not_turn_rest_day_into_hard_cardio": "Не превращайте отдых в тяжелое кардио.", "rest_and_steps_by_recovery": "Отдых и шаги по восстановлению." },
+    "rules": { "double_progression": "Используйте двойную прогрессию.", "increase_load_when_top_reps_all_sets_at_target_rpe": "Повышайте вес, когда все подходы достигли верхней границы повторов при целевом RPE.", "big_lifts_add_2_5_to_5_kg": "В больших движениях добавляйте 2.5-5 кг.", "isolation_add_smallest_increment": "В изоляции добавляйте минимальный доступный шаг.", "cut_do_not_force_rpe_10_every_set": "На сушке не форсируйте RPE 10 в каждом подходе.", "compound_lifts_usually_rpe_8_to_9": "Держите базовые движения в основном на RPE 8-9.", "rpe_10_only_last_safe_isolation_set": "RPE 10 в основном для последнего безопасного изолирующего подхода." }
+  },
+  "trainingPlans": { "pplUl": { "title": "PPL x UL", "description": "Жим / Тяга / Ноги / Отдых / Верх / Низ / Отдых." }, "days": { "push": "Жим", "pull": "Тяга", "legs": "Ноги", "rest": "Отдых", "upper": "Верх", "lower": "Низ" } }
 }
