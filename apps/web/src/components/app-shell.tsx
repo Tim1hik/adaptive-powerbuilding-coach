@@ -2,6 +2,7 @@ import { Dumbbell } from "lucide-react";
 import { getTranslations } from "next-intl/server";
 import { Link } from "@/i18n/navigation";
 import { LanguageSwitcher } from "@/components/language-switcher";
+import { AppGuideModal } from "@/components/app-guide-modal";
 
 const navKeys = ["dashboard", "nutrition", "training", "checkIn", "progress", "arena", "support", "settings"] as const;
 const hrefs = ["/dashboard", "/nutrition", "/training", "/check-in", "/progress", "/arena", "/support", "/settings"] as const;
@@ -46,6 +47,7 @@ export async function AppShell({ children }: { children: React.ReactNode }) {
           </Link>
         ))}
       </nav>
+      <AppGuideModal />
     </div>
   );
 }

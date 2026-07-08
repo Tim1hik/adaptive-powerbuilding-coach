@@ -1,6 +1,7 @@
 "use client";
 
 import { useTranslations } from "next-intl";
+import { openAppGuide } from "@/components/app-guide-modal";
 import { Button } from "@/components/ui/button";
 import { resetDemoState } from "@/lib/demo-store";
 
@@ -14,6 +15,7 @@ export function SettingsPanel() {
           <p className="mt-1 text-sm text-muted-foreground">{t(`items.${keyName}.body`)}</p>
         </div>
       ))}
+      <Button type="button" variant="outline" onClick={() => openAppGuide()}>{t("showGuide")}</Button>
       <Button variant="destructive" onClick={() => resetDemoState()}>{t("resetDemo")}</Button>
     </div>
   );

@@ -6,6 +6,25 @@
   "common": {
     "language": "Language"
   },
+  "appGuide": {
+    "title": "Welcome to Adaptive Powerbuilding Coach",
+    "intro": "This app helps you calculate macros, follow the PPL × UL program, log workouts, check readiness, and track progress.",
+    "steps": {
+      "profile": "Complete your profile and calculate calories/macros.",
+      "program": "Choose the default PPL × UL program or view it on the Training page.",
+      "checkIn": "Before training, complete the readiness check-in.",
+      "diary": "Log sets, weight, reps, RPE, and notes in the workout diary.",
+      "progress": "Track body weight, progress, consistency, and personal records.",
+      "arena": "Use Arena only if you want to share public leaderboard stats."
+    },
+    "safety": "This is educational fitness guidance, not medical advice.",
+    "dontShowAgain": "Don’t show again",
+    "actions": {
+      "startSetup": "Start setup",
+      "openPplUl": "Open PPL × UL",
+      "close": "Close"
+    }
+  },
   "nav": {
     "brand": "Power Coach",
     "dashboard": "Dashboard",
@@ -347,6 +366,7 @@
   "settings": {
     "title": "Settings",
     "description": "Language, units, privacy, leaderboard opt-in, Telegram username, and demo controls.",
+    "showGuide": "Show app guide",
     "resetDemo": "Reset demo data",
     "items": {
       "language": {
