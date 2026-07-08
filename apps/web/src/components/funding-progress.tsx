@@ -14,14 +14,14 @@ export async function FundingProgress() {
       <div className="flex items-end justify-between gap-3">
         <div>
           <p className="text-sm text-cyan-100">{t("fund.current")}</p>
-          <p className="text-3xl font-semibold text-white">{t("fund.amount", { amount: currentRaised })}</p>
+          <p className="text-3xl font-semibold text-foreground">{t("fund.amount", { amount: currentRaised })}</p>
         </div>
         <div className="text-right">
           <p className="text-sm text-cyan-100">{t("fund.goal")}</p>
-          <p className="text-2xl font-semibold text-white">{t("fund.amount", { amount: goalAmount })}</p>
+          <p className="text-2xl font-semibold text-foreground">{t("fund.amount", { amount: goalAmount })}</p>
         </div>
       </div>
-      <div className="mt-4 h-3 overflow-hidden rounded-full bg-zinc-900">
+      <div className="mt-4 h-3 overflow-hidden rounded-full bg-muted">
         <div className="h-full rounded-full bg-cyan-300" style={{ width: `${progress}%` }} />
       </div>
       <div className="mt-3 grid gap-1 text-sm text-cyan-100">

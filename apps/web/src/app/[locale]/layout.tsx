@@ -69,7 +69,7 @@ export default async function LocaleLayout({
   const messages = await getMessages();
 
   return (
-    <html lang={locale} className={`${geistSans.variable} ${geistMono.variable} h-full`}>
+    <html lang={locale} className={`${geistSans.variable} ${geistMono.variable} dark h-full`}>
       <body className="flex min-h-full flex-col antialiased">
         <NextIntlClientProvider messages={messages}>
           {children}

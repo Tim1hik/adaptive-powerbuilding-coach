@@ -44,15 +44,15 @@ export function AuthForm({ mode }: { mode: "signIn" | "signUp" }) {
   return (
     <form onSubmit={form.handleSubmit(submit)} className="grid gap-3">
       <label className="grid gap-1 text-sm">
-        <span className="text-zinc-300">{t("email")}</span>
-        <input className="rounded-lg border border-white/10 bg-white/5 px-3 py-2 text-white" {...form.register("email")} />
+        <span className="text-foreground">{t("email")}</span>
+        <input className="rounded-lg border border-border bg-input/40 px-3 py-2 text-foreground" {...form.register("email")} />
       </label>
       <label className="grid gap-1 text-sm">
-        <span className="text-zinc-300">{t("password")}</span>
-        <input type="password" className="rounded-lg border border-white/10 bg-white/5 px-3 py-2 text-white" {...form.register("password")} />
+        <span className="text-foreground">{t("password")}</span>
+        <input type="password" className="rounded-lg border border-border bg-input/40 px-3 py-2 text-foreground" {...form.register("password")} />
       </label>
       <Button type="submit">{t(mode)}</Button>
-      <p className="text-sm text-zinc-400">{message || t("anyProvider")}</p>
+      <p className="text-sm text-muted-foreground">{message || t("anyProvider")}</p>
     </form>
   );
 }

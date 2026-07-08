@@ -10,7 +10,7 @@ export default async function PrivacyPage() {
         <PageHeader title={t("title")} description={t("description")} />
         <div className="grid gap-3">
           {["privateData", "leaderboard", "serviceRole", "cache"].map((keyName) => (
-            <div key={keyName} className="rounded-lg border border-white/10 bg-white/[0.04] p-5 text-sm leading-6 text-zinc-300">
+            <div key={keyName} className="rounded-lg border border-border bg-card p-5 text-sm leading-6 text-card-foreground">
               {t(`sections.${keyName}`)}
             </div>
           ))}

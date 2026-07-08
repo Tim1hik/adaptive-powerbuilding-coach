@@ -23,8 +23,8 @@ export function ProgressCharts() {
   const t = useTranslations("progress");
   return (
     <div className="grid gap-4 lg:grid-cols-2">
-      <div className="h-72 rounded-lg border border-white/10 bg-white/[0.04] p-4">
-        <h2 className="mb-4 text-sm text-zinc-300">{t("weightChart")}</h2>
+      <div className="h-72 rounded-lg border border-border bg-card p-4 text-card-foreground">
+        <h2 className="mb-4 text-sm text-card-foreground">{t("weightChart")}</h2>
         <ResponsiveContainer width="100%" height="85%">
           <LineChart data={weightData}>
             <XAxis dataKey="day" stroke="#a1a1aa" />
@@ -34,8 +34,8 @@ export function ProgressCharts() {
           </LineChart>
         </ResponsiveContainer>
       </div>
-      <div className="h-72 rounded-lg border border-white/10 bg-white/[0.04] p-4">
-        <h2 className="mb-4 text-sm text-zinc-300">{t("volumeChart")}</h2>
+      <div className="h-72 rounded-lg border border-border bg-card p-4 text-card-foreground">
+        <h2 className="mb-4 text-sm text-card-foreground">{t("volumeChart")}</h2>
         <ResponsiveContainer width="100%" height="85%">
           <BarChart data={volumeData}>
             <XAxis dataKey="day" stroke="#a1a1aa" />

@@ -4,5 +4,5 @@ import { PageHeader } from "@/components/page-header";
 
 export default async function ProfilePage() {
   const t = await getTranslations("profile");
-  return <AppShell><main><PageHeader title={t("title")} description={t("description")} /><div className="rounded-lg border border-white/10 bg-white/[0.04] p-5 text-zinc-300">{t("body")}</div></main></AppShell>;
+  return <AppShell><main><PageHeader title={t("title")} description={t("description")} /><div className="rounded-lg border border-border bg-card p-5 text-card-foreground">{t("body")}</div></main></AppShell>;
 }

@@ -9,9 +9,9 @@ export function SettingsPanel() {
   return (
     <div className="grid gap-3 md:grid-cols-2">
       {["language", "units", "theme", "privacy", "leaderboardOptIn", "telegramUsername", "activeProgram", "dataExport", "deleteAccount"].map((keyName) => (
-        <div key={keyName} className="rounded-lg border border-white/10 bg-white/[0.04] p-4">
-          <h2 className="font-semibold">{t(`items.${keyName}.title`)}</h2>
-          <p className="mt-1 text-sm text-zinc-400">{t(`items.${keyName}.body`)}</p>
+        <div key={keyName} className="rounded-lg border border-border bg-card p-4 text-card-foreground">
+          <h2 className="font-semibold text-card-foreground">{t(`items.${keyName}.title`)}</h2>
+          <p className="mt-1 text-sm text-muted-foreground">{t(`items.${keyName}.body`)}</p>
         </div>
       ))}
       <Button variant="destructive" onClick={() => resetDemoState()}>{t("resetDemo")}</Button>

@@ -22,12 +22,12 @@ export function CryptoWalletCard({ network, address }: { network: string; addres
   }
 
   return (
-    <Card className="rounded-lg border-white/10 bg-white/[0.04]">
+    <Card className="rounded-lg border-border bg-card">
       <CardHeader>
         <CardTitle className="text-base">{network}</CardTitle>
       </CardHeader>
       <CardContent className="grid gap-3">
-        <p className="font-mono text-sm text-zinc-300">{address ? shortenAddress(address) : t("comingSoon")}</p>
+        <p className="font-mono text-sm text-card-foreground">{address ? shortenAddress(address) : t("comingSoon")}</p>
         <Button type="button" variant="outline" onClick={copyAddress} disabled={!address} className="w-fit">
           <Copy className="mr-2 h-4 w-4" />
           {copied ? t("copied") : t("copy")}

@@ -20,11 +20,11 @@ export default async function SupportPage() {
     <AppShell>
       <main className="grid gap-5 pb-20">
         <PageHeader title={t("title")} description={t("description")} />
-        <Card className="rounded-lg border-white/10 bg-white/[0.04]">
+        <Card className="rounded-lg border-border bg-card">
           <CardHeader>
             <CardTitle>{t("project.title")}</CardTitle>
           </CardHeader>
-          <CardContent className="grid gap-3 text-sm leading-6 text-zinc-300">
+          <CardContent className="grid gap-3 text-sm leading-6 text-card-foreground">
             <p>{t("project.body")}</p>
             <a className="w-fit rounded-lg border border-cyan-300/30 px-3 py-2 text-cyan-100" href="https://t.me/tim1hik" target="_blank" rel="noreferrer">
               {telegramUsername}
@@ -32,7 +32,7 @@ export default async function SupportPage() {
           </CardContent>
         </Card>
         <FundingProgress />
-        <Card className="rounded-lg border-white/10 bg-white/[0.04]">
+        <Card className="rounded-lg border-border bg-card">
           <CardHeader>
             <CardTitle>{t("donatepay.title")}</CardTitle>
           </CardHeader>
@@ -40,7 +40,7 @@ export default async function SupportPage() {
             {donatePayUrl ? (
               <iframe title={t("donatepay.title")} src={donatePayUrl} className="h-[220px] w-full max-w-[520px] rounded-lg border-0" />
             ) : (
-              <p className="text-sm text-zinc-300">{t("donatepay.comingSoon")}</p>
+              <p className="text-sm text-card-foreground">{t("donatepay.comingSoon")}</p>
             )}
           </CardContent>
         </Card>
@@ -50,11 +50,11 @@ export default async function SupportPage() {
           ))}
         </section>
         {["teaser", "free", "premium", "secret"].map((keyName) => (
-          <Card key={keyName} className="rounded-lg border-white/10 bg-white/[0.04]">
+          <Card key={keyName} className="rounded-lg border-border bg-card">
             <CardHeader>
               <CardTitle>{t(`${keyName}.title`)}</CardTitle>
             </CardHeader>
-            <CardContent className="text-sm leading-6 text-zinc-300">
+            <CardContent className="text-sm leading-6 text-card-foreground">
               {keyName === "free" || keyName === "premium" || keyName === "teaser" ? (
                 <ul className="grid gap-2">
                   {["one", "two", "three", "four", "five", "six", "seven"].map((item) => {

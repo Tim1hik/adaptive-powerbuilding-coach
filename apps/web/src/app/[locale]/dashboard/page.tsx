@@ -28,7 +28,7 @@ export default async function DashboardPage() {
             <MetricCard key={keyName} label={t(`metrics.${keyName}`)} value={keyName === "lastWeight" ? "79.6" : keyName === "readiness" ? "84" : keyName === "program" ? "PPL x UL" : keyName === "training" ? t("todayTraining") : keyName === "calories" ? "2270" : keyName === "protein" ? "176" : keyName === "carbs" ? "266" : t("nextWorkout")} detail={keyName === "lastWeight" ? `${t("average")}: ${average} · ${t("trend")}: ${trend}` : undefined} />
           ))}
         </div>
-        <div className="flex flex-wrap gap-3"><Link href="/check-in" className="rounded-lg bg-primary px-4 py-2 text-sm font-medium text-primary-foreground">{t("quickCheckIn")}</Link><Link href="/training/diary" className="rounded-lg border border-white/15 px-4 py-2 text-sm font-medium text-white">{t("quickLog")}</Link></div>
+        <div className="flex flex-wrap gap-3"><Link href="/check-in" className="rounded-lg bg-primary px-4 py-2 text-sm font-medium text-primary-foreground">{t("quickCheckIn")}</Link><Link href="/training/diary" className="rounded-lg border border-border px-4 py-2 text-sm font-medium text-foreground">{t("quickLog")}</Link></div>
       </main>
     </AppShell>
   );

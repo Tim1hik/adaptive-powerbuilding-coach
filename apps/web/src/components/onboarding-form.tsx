@@ -73,28 +73,28 @@ export function OnboardingForm() {
       <div className="grid gap-3 md:grid-cols-2">
         {fields.map((field) => (
           <label key={field} className="grid gap-1 text-sm">
-            <span className="text-zinc-300">{t(`fields.${field}`)}</span>
-            <input className="rounded-lg border border-white/10 bg-white/5 px-3 py-2 text-white" {...form.register(field)} />
+            <span className="text-foreground">{t(`fields.${field}`)}</span>
+            <input className="rounded-lg border border-border bg-input/40 px-3 py-2 text-foreground" {...form.register(field)} />
           </label>
         ))}
         <label className="grid gap-1 text-sm">
-          <span className="text-zinc-300">{t("fields.sex")}</span>
-          <select className="rounded-lg border border-white/10 bg-zinc-900 px-3 py-2 text-white" {...form.register("sex")}>
+          <span className="text-foreground">{t("fields.sex")}</span>
+          <select className="rounded-lg border border-border bg-input/40 px-3 py-2 text-foreground" {...form.register("sex")}>
             <option value="male">{t("options.male")}</option>
             <option value="female">{t("options.female")}</option>
           </select>
         </label>
         <label className="grid gap-1 text-sm">
-          <span className="text-zinc-300">{t("fields.goal")}</span>
-          <select className="rounded-lg border border-white/10 bg-zinc-900 px-3 py-2 text-white" {...form.register("goal")}>
+          <span className="text-foreground">{t("fields.goal")}</span>
+          <select className="rounded-lg border border-border bg-input/40 px-3 py-2 text-foreground" {...form.register("goal")}>
             {["aggressive_cut", "cut", "maintenance", "lean_bulk", "bulk"].map((goal) => (
               <option key={goal} value={goal}>{t(`goals.${goal}`)}</option>
             ))}
           </select>
         </label>
         <label className="grid gap-1 text-sm">
-          <span className="text-zinc-300">{t("fields.preferredLanguage")}</span>
-          <select className="rounded-lg border border-white/10 bg-zinc-900 px-3 py-2 text-white" {...form.register("preferredLanguage")}>
+          <span className="text-foreground">{t("fields.preferredLanguage")}</span>
+          <select className="rounded-lg border border-border bg-input/40 px-3 py-2 text-foreground" {...form.register("preferredLanguage")}>
             <option value="en">{t("options.english")}</option>
             <option value="ru">{t("options.russian")}</option>
           </select>
