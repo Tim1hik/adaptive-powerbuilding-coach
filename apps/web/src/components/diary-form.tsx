@@ -6,6 +6,13 @@ import { useMemo, useState } from "react";
 import { Button } from "@/components/ui/button";
 import { readDemoState, writeDemoState, type DemoSession } from "@/lib/demo-store";
 
+const exerciseNameToId: Record<string, string> = {
+  "Smith Machine Press": "smith-machine-press",
+  "Dumbbell Lateral Raise": "dumbbell-lateral-raise",
+  "Barbell Squat": "barbell-squat",
+  "Romanian Deadlift": "romanian-deadlift"
+};
+
 export function DiaryForm() {
   const t = useTranslations("diary");
   const program = getDefaultPplUlProgram();
@@ -44,7 +51,7 @@ export function DiaryForm() {
         <label className="grid gap-1 text-sm">
           <span className="text-foreground">{t("exercise")}</span>
           <select className="rounded-lg border border-border bg-input/40 px-3 py-2 text-foreground" value={exerciseName} onChange={(event) => setExerciseName(event.target.value)}>
-            {day.exercises.map((exercise) => <option key={exercise.id} value={exercise.exerciseName}>{exercise.exerciseName}</option>)}
+            {day.exercises.map((exercise) => <option key={exercise.id} value={exercise.exerciseName}>{t(`exercises.${exercise.id}`)}</option>)}
           </select>
         </label>
         {["weightKg", "reps", "rpe"].map((field) => (
@@ -63,7 +70,7 @@ export function DiaryForm() {
         <h2 className="text-lg font-semibold">{t("previous")}</h2>
         {sessions.slice(0, 4).map((session) => (
           <div key={session.id} className="rounded-lg border border-border bg-card p-3 text-sm text-card-foreground">
-            {session.date} · {t(`days.${session.dayType}`)} · {session.sets[0]?.exerciseName} · {session.sets[0]?.estimatedOneRepMaxKg} {t("e1rm")}
+            {session.date} · {t(`days.${session.dayType}`)} · {t(`exercises.${exerciseNameToId[session.sets[0]?.exerciseName ?? ""] ?? "unknown"}`)} · {session.sets[0]?.estimatedOneRepMaxKg} {t("e1rm")}
           </div>
         ))}
       </div>
